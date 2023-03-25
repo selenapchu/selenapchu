@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Selena Chu Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/thecoducer/anything/prism.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Selena Chu Portfolio</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Projects</a></li>
+							<li><a href="aboutme.html">About Me</a></li>
+							<li class="active"><a href="sql_project.html">SQL Project</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/selenapchu/" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/selenapchu" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header>
+									<h1>Bank Data Analysis</h1>
+									<p>Programming Language: <strong>SQL</strong> <br /> Software: <strong>Oracle SQL Developer</strong>
+								</header>
+
+								<!-- Text stuff -->
+									<h3>DATA EXPLORATION</h3>
+									<p>Data exploration is the first step of data analysis. It is a good way to get to know the dataset before one performs tasks like data visualization.</p>
+									<p>I was given a bank dataset that consist of <strong>11</strong> tables: <i>ACCOUNT, BRANCH, CUSTOMER, DEPARTMENT, EMPLOYEE, INDIVIDUAL, PRODUCT, PRODUCT_TYPE, BUSINESS, OFFICER, and TRANSACTION</i>, etc. And each table have various attributes. To understand relationships between different tables, I decided to start with SQL queries and use aggregation functions like <em></em>COUNT(), AVG(), MAX()/MIN()</em>, and other syntaxes such as <em>JOINs</em> and <em></em>CREATE VIEW</em> to manipulate and extract useful data.</p>
+									<!--<b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>.
+									Finally, this is a <a href="#">link</a>.</p>-->
+									<hr />
+									<!--<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />-->
+									<header>
+										<h3>SQL queries</h3>
+									</header>
+									<p>The database is preloaded into the database server hosted by University of Washington. </br>
+									Once the connection has been set up successfully, I started to query the tables.</br>
+									Below are the SQL queries I used for data exploration.
+									</p>
+
+									<pre id="embed-github-pre"><code class="language-sql line-numbers" id="embed-github-code"></code></pre>
+
+<script>
+    let gitHubLink = "https://raw.githubusercontent.com/selenapchu/SQL_Code/main/bank%20account.sql";
+
+    getCodeAsRawTextFromGithub().then(data => {
+        let preProcessedData = preProcessData(data);
+        document.getElementById("embed-github-code").innerHTML = preProcessedData;
+        loadScripts(["https://cdn.jsdelivr.net/gh/thecoducer/anything/prism.js"]);
+    });
+
+    async function getCodeAsRawTextFromGithub() {
+        let response = await fetch(gitHubLink);
+        let rawText = await response.text();
+        return rawText;
+    }
+
+    function preProcessData(data) {
+        data = data.replaceAll("<", "&lt;");
+        data = data.replaceAll(">", "&gt;");
+        return data;
+    }
+
+    function loadScripts(scripts) {
+        for (let i = 0; i < scripts.length; i++) {
+            this.insertAScriptTagInsideTheHeadTag(scripts[i]);
+        }
+    }
+
+    function insertAScriptTagInsideTheHeadTag(src) {
+        let scriptTag = document.createElement('script');
+        scriptTag.type = "text/javascript";
+        scriptTag.async = true;
+        scriptTag.src = src;
+        let headTag = document.getElementsByTagName('head')[0];
+        headTag.appendChild(scriptTag);
+    }
+</script>
+
+							</section>		
+					</div>				
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section class="alt">
+							<h3>Location</h3>
+							<p>Seattle, WA<br />
+							</p>
+						</section>
+						<!--<section>
+							<h3>Phone</h3>
+							<p><a href="#">(000) 000-0000</a></p>
+						</section>-->
+						<section>
+							<h3>Email</h3>
+							<p><a href="pchu3@uw.edu">pchu3@uw.edu</a></p>
+						</section>
+						<section>
+							<h3>Social</h3>
+							<ul class="icons alt">
+								<li><a href="https://www.linkedin.com/in/selenapchu/" class="icon brands fa-linkedin-in" target="_blank" rel="noopener noreferrer"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/selenapchu" class="icon brands fa-github" target="_blank" rel="noopener noreferrer"><span class="label">GitHub</span></a></li>
+							</ul>
+						</section>
+					</section>
+					<section class="">
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; SelenaPChu2023</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
